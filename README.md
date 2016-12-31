@@ -119,10 +119,3 @@ What we mean by this, is that if you add a `debugger` or `binding.pry` on a part
 This will display the logs from the rails app, as well as give you access to stop the execution on the debugging point as you would expect.
 
 **Take note that if you kill this process you will kill the web service, and you will probably need to lift it up again.**
-
-## Icalia Guides
-
-Remember you can always rely on the Icalia Guides to a better development and
-internal progamming style:
-
-* [Rails Guides](https://github.com/IcaliaLabs/icalia_guides/tree/master/rails)
