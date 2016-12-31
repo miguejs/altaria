@@ -41,16 +41,15 @@ It may take a while before you see anything, you can follow the logs of the cont
 Once you see an output like this:
 
 ```
-web_1  | => Booting Puma
-web_1  | => Rails 4.2.0 application starting in development on http://0.0.0.0:3000
-web_1  | => Run `rails server -h` for more startup options
-web_1  | => Ctrl-C to shutdown server
-web_1  | Puma starting in single mode...
-web_1  | * Version 3.4.0 (ruby 2.2.5-p319), codename: Owl Bowl Brawl
-web_1  | * Min threads: 0, max threads: 16
-web_1  | * Environment: development
-web_1  | * Listening on tcp://0.0.0.0:3000
-web_1  | Use Ctrl-C to stop
+altaria_1  | [info] Running App.Endpoint with Cowboy using http://localhost:4000
+altaria_1  | 31 Dec 01:16:59 - info: compiling
+altaria_1  | 31 Dec 01:17:00 - info: compiled 6 files into 2 files, copied 3 in 7.6 sec
+altaria_1  | [info] GET /
+altaria_1  | [debug] Processing by App.PageController.index/2
+altaria_1  |   Parameters: %{}
+altaria_1  |   Pipelines: [:browser]
+altaria_1  | [info] Sent 200 in 276ms
+altaria_1  | [error] backend port not found: :inotifywait
 ```
 
 This means the project is up and running. It is worth mention that the `docker-compose` command will create the database if is not there yet.
