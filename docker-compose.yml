@@ -2,6 +2,8 @@ version: '2'
 services:
   db:
     image: postgres
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
   altaria:
     build: .
     command: mix phoenix.server
