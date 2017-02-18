@@ -4,15 +4,37 @@ volumes:
     driver: local
 services:
   db:
-    image: postgres
+    image: postgres:9.6
+    ports:
+      - 5432:5432
     volumes:
       - postgres-data:/var/lib/postgresql/data
-  altaria:
+    environment:
+      POSTGRES_PASSWORD: P4Ssw0rD!
+      POSTGRES_USER: postgres
+  web: &app
     build: .
     command: mix phoenix.server
+    environment:
+      MIX_ENV: dev
+      DB_URL: "postgres://postgres:P4Ssw0rD!@db:5432/altaria_dev?encoding=unicode&schema_search_path=public,partitioning"
     volumes:
       - .:/app
     ports:
       - "4000:4000"
+    links:
+      - db
     depends_on:
       - db
+    stdin_open: true
+    tty: true
+  test:
+    <<: *app
+    ports:
+      - "4001:4001"
+    command: mix ecto.migrate
+    environment:
+      MIX_ENV: test
+      DB_URL: "postgres://postgres:P4Ssw0rD!@db:5432/altaria_test?encoding=unicode&schema_search_path=public,partitioning"
+
+
