@@ -9,11 +9,8 @@ before_install:
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
-  - ls -a
-  - pwd
+script:
   - docker-compose build
   - docker-compose run test mix ecto.create
   - docker-compose run test mix ecto.migrate
-
-script:
   - docker-compose run test mix test
