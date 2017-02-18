@@ -6,7 +6,7 @@ services:
   db:
     image: postgres:9.6
     ports:
-      - 5432:5432
+      - 5431:5432
     volumes:
       - postgres-data:/var/lib/postgresql/data
     environment:
@@ -19,7 +19,7 @@ services:
     command: mix phoenix.server
     environment:
       MIX_ENV: dev
-      DB_URL: "postgres://postgres:P4Ssw0rD!@db:5432/altaria_dev?encoding=unicode&schema_search_path=public,partitioning"
+      DB_URL: "postgres://postgres:P4Ssw0rD!@db:5431/altaria_dev?encoding=unicode&schema_search_path=public,partitioning"
     volumes:
       - .:/app
     ports:
@@ -37,6 +37,6 @@ services:
     command: mix ecto.migrate
     environment:
       MIX_ENV: test
-      DB_URL: "postgres://postgres:P4Ssw0rD!@db:5432/altaria_test?encoding=unicode&schema_search_path=public,partitioning"
+      DB_URL: "postgres://postgres:P4Ssw0rD!@db:5431/altaria_test?encoding=unicode&schema_search_path=public,partitioning"
 
 
