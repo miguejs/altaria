@@ -36,5 +36,5 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :app, App.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DB_URL")
+  url: System.get_env("DB_URL"),
   pool: Ecto.Adapters.SQL.Sandbox

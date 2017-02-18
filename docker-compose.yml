@@ -5,15 +5,17 @@ volumes:
 services:
   db:
     image: postgres:9.6
-    ports:
-      - 5432:5432
+    expose:
+      - "5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: P4Ssw0rD!
       POSTGRES_USER: postgres
   web: &app
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: mix phoenix.server
     environment:
       MIX_ENV: dev
