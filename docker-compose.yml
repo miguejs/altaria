@@ -13,7 +13,9 @@ services:
       POSTGRES_PASSWORD: P4Ssw0rD!
       POSTGRES_USER: postgres
   web: &app
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: mix phoenix.server
     environment:
       MIX_ENV: dev
