@@ -1,6 +1,6 @@
+[![Build Status](https://travis-ci.org/miguejs/altaria.svg?branch=master)](https://travis-ci.org/miguejs/altaria)
 # Altaria
-Personal site with  information about me, projects, and maybe posts build with phoenix as an API with [Furret](https://github.com/miguejs/furret) as front-end client
-
+Personal site with  information about me, projects and posts build with phoenix 
 # Run Altaria using Docker
 
 This guide will help you get started to setup the project using Docker, and keep using it as part of your development process.
