@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/miguejs/altaria.svg?branch=master)](https://travis-ci.org/miguejs/altaria)
-# Altaria
+# Altaria [![Build Status](https://travis-ci.org/miguejs/altaria.svg?branch=master)](https://travis-ci.org/miguejs/altaria)
 Personal site with  information about me, projects and posts build with phoenix 
 # Run Altaria using Docker
 
